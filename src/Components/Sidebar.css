@@ -1,0 +1,137 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sidebar {
+  height: 100vh;
+  width: 230px;
+  min-height: 100vh;
+  background: var(--bg-sidebar);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 18px;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  border-right: 1px solid #929292;
+}
+
+.sidebar-logo {
+  padding: 10px 12px 35px;
+}
+
+.sidebar-logo h2 {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-logo span {
+  color: var(--accent-blue);
+}
+
+.menu-title {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 20px 12px 12px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 14px;
+  text-decoration: none;
+  color: var(--text-primary);
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.sidebar-link svg {
+  font-size: 21px;
+}
+
+.sidebar-link:hover {
+  background: #263449;
+  color: white;
+}
+
+.sidebar-link.active {
+  background: #ffffff;
+  color: rgb(12, 12, 12);
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 14px;
+  border: none;
+  background: transparent;
+  color: #f87171;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 9px;
+}
+
+.logout-btn:hover {
+  background: #ffffff;
+}
+
+.logout-btn svg {
+  font-size: 21px;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 5px 5px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background: #104c88;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.sidebar-user h4 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.sidebar-user p {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+  }
+}

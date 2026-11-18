@@ -1,0 +1,147 @@
+
+/* Background overlay */
+.model-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    z-index: 9999;
+
+    animation: fadeIn 0.3s ease;
+}
+
+/* Modal box */
+.detailbox {
+    width: 100%;
+    max-width: 550px;
+    background: #ffffff;
+
+    padding: 35px;
+    border-radius: 18px;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+
+    animation: slideUp 0.35s ease;
+}
+
+/* Heading */
+.detailbox h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #172033;
+
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Form */
+.detailbox form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Input and textarea */
+.detailbox input,
+.detailbox textarea {
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 1px solid #dce2ea;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-family: inherit;
+    color: #263247;
+
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Input focus */
+.detailbox input:focus,
+.detailbox textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+/* Textarea */
+.detailbox textarea {
+    min-height: 160px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.detailbox button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* Update button */
+.detailbox button[type="submit"] {
+    background: #4f46e5;
+    color: white;
+}
+
+.detailbox button[type="submit"]:hover {
+    background: #3730a3;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(79, 70, 229, 0.25);
+}
+
+/* Cancel button */
+.detailbox button[type="button"] {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.detailbox button[type="button"]:hover {
+    background: #e2e8f0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .detailbox {
+        padding: 24px 18px;
+    }
+
+    .detailbox h2 {
+        font-size: 22px;
+    }
+}
